@@ -1,6 +1,7 @@
 <?php
     include 'conecta.php';
-    $timezone = new DateTimeZone('America/Sao_Paulo');   
+    $timezone = new DateTimeZone('America/Sao_Paulo'); 
+    $matricula = $_POST['matricula'];
     $nome = $_POST['nome'];
     $epi = $_POST['epi'];
     $dias = $_POST['validade'];
@@ -21,7 +22,7 @@
     }
     else
     {
-        $sql = "INSERT INTO funcionario(nome,epi,data_entrega,data_vencimento) VALUES ('$nome','$epi','$data_entrega_formatada','$data_validade_formatada')";
+        $sql = "INSERT INTO funcionario(matricula,nome,epi,data_entrega,data_vencimento) VALUES ('$matricula''$nome','$epi','$data_entrega_formatada','$data_validade_formatada')";
         if (mysqli_query($conn, $sql))
         {
             echo "<script language='javascript' type='text/javascript'>
