@@ -47,7 +47,7 @@
                                 ?>                                
                                 <div class="modal-body">
 
-                                    <form action="edfuncionario.php?matricula=<?php echo $matricula ?>" method="post">
+                                    <form action="edfuncionario.php?id=<?php echo $id ?>" method="post">
                                         <label>MATRICULA</label>
                                         <input type="text" class="form-control" name="matricula" value="<?php echo $matricula; ?>" required/>
                                         <label>NOME</label>
